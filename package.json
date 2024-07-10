@@ -1,6 +1,6 @@
 {
   "name": "react-static-pro-plugin-sitemap",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "A react static pro plugin for exporting sitemap information",
   "main": "dist/node.api.js",
   "repository": "https://github.com/satishattada/react-static-pro.git",
