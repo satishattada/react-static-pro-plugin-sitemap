@@ -8,6 +8,7 @@ exports.generateXML = generateXML;
 exports.getPermaLink = getPermaLink;
 var _fsExtra = _interopRequireDefault(require("fs-extra"));
 var _path = _interopRequireDefault(require("path"));
+var _chalk = _interopRequireDefault(require("chalk"));
 var _reactStaticProMax = require("react-static-pro-max");
 var _excluded = ["loc", "hreflang"];
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
@@ -46,11 +47,10 @@ function main(_x, _x2) {
 }
 function _main() {
   _main = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(state, options) {
-    var chalk, _state$config, DIST, disableRoutePrefixing, siteRoot, publicPath, staging, prefixPath, filename, xml;
+    var _state$config, DIST, disableRoutePrefixing, siteRoot, publicPath, staging, prefixPath, filename, xml;
     return _regenerator().w(function (_context) {
       while (1) switch (_context.n) {
         case 0:
-          chalk = require("chalk");
           _state$config = state.config, DIST = _state$config.paths.DIST, disableRoutePrefixing = _state$config.disableRoutePrefixing, siteRoot = _state$config.siteRoot, publicPath = _state$config.publicPath, staging = state.staging;
           prefixPath = disableRoutePrefixing ? siteRoot : publicPath;
           filename = staging ? 'sitemap.staging.xml' : 'sitemap.xml';
@@ -59,7 +59,7 @@ function _main() {
           _context.n = 1;
           return _fsExtra["default"].writeFile(_path["default"].join(DIST, filename), xml);
         case 1:
-          console.log(chalk.green("[\u2713] ".concat(filename, " generated")));
+          console.log(_chalk["default"].green("[\u2713] ".concat(filename, " generated")));
         case 2:
           return _context.a(2);
       }

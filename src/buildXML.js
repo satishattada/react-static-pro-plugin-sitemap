@@ -1,5 +1,6 @@
 import fs from 'fs-extra'
 import nodePath from 'path'
+import chalk from 'chalk'
 import { pathJoin } from 'react-static-pro-max'
 
 const REGEX_TO_GET_LAST_SLASH = /\/{1,}$/gm
@@ -13,7 +14,6 @@ const defaultGetUrlAttributes = (route, { prefixPath }) => {
 }
 
 export default async function main(state, options) {
-  const chalk = require("chalk");
   const {
     config: {
       paths: { DIST },
